@@ -23,10 +23,10 @@ int list_exist;
 		If list type is 0, the function creates linked list, and if list type is 1, then the function creates stack.
 		The type of return is struct linked_list*, which means this function returns the address of the first node of the list.
 	@Error cases:
-		1. If the input is less than 1, it prints error message ¡°Function create_list: the number of nodes is not specified correctly
+		1. If the input is less than 1, it prints error message Â¡Â°Function create_list: the number of nodes is not specified correctly
 		and exit the function.
-		2. If a list already exists, then it prints the error message ¡°Function create_list: a list already exists¡± and exit the function.
-		3. If  the input value for the type is not 0 or 1, it should print the error message ¡°Function create_list: the list type is wrong¡±. 
+		2. If a list already exists, then it prints the error message Â¡Â°Function create_list: a list already existsÂ¡Â± and exit the function.
+		3. If  the input value for the type is not 0 or 1, it should print the error message Â¡Â°Function create_list: the list type is wrongÂ¡Â±. 
  */
 
 struct linked_list* create_list (int number_of_nodes, int list_type)
@@ -35,18 +35,15 @@ struct linked_list* create_list (int number_of_nodes, int list_type)
 	int i, j;
 	int bFound;
 
-	if (number_of_nodes < 1)
-	{
+	if (number_of_nodes < 1){
 		printf("Function create_list: the number of nodes is not specified correctly\n");
 		return NULL;
 	}
-	if(list_exist == 1)
-	{
+	if(list_exist == 1){
 		printf("Function create_list: a list already exists\nRestart a Program\n");
 		exit(0);	
 	}
-	if(list_type != 0 && list_type != 1)
-	{
+	if(list_type != 0 && list_type != 1){
 		printf("Function create_list: the list type is wrong\n");
 		exit(0);	
 	}
@@ -58,19 +55,14 @@ struct linked_list* create_list (int number_of_nodes, int list_type)
 
 	//now put nodes into the list with random numbers.
 	srand((unsigned int)time(NULL));
-	if(list_type == 0)
-	{
-		for ( i = 0; i < number_of_nodes; ++i )
-		{
-			while ( 1 )
-			{
+	if(list_type == 0){
+		for ( i = 0; i < number_of_nodes; ++i )	{
+			while ( 1 ){
                     
 				a[i] = rand() % number_of_nodes + 1;
 				bFound = 0;
-				for ( j = 0; j < i; ++j )
-				{
-					if ( a[j] == a[i] )
-					{
+				for ( j = 0; j < i; ++j ){
+					if ( a[j] == a[i] ){
 						bFound = 1;
 						break;
 					}
@@ -82,19 +74,14 @@ struct linked_list* create_list (int number_of_nodes, int list_type)
 			insert_node(new_list, new_node);
 		}
 	}
-	else if(list_type == 1)
-	{
-		for ( i = 0; i < number_of_nodes; ++i )
-		{
-			while ( 1 )
-			{
+	else if(list_type == 1)	{
+		for ( i = 0; i < number_of_nodes; ++i )	{
+			while ( 1 ){
                     
 				a[i] = rand() % number_of_nodes + 1;
 				bFound = 0;
-				for ( j = 0; j < i; ++j )
-				{
-					if ( a[j] == a[i] )
-					{
+				for ( j = 0; j < i; ++j ){
+					if ( a[j] == a[i] ){
 						bFound = 1;
 						break;
 					}
@@ -149,8 +136,8 @@ void RemoveRear(struct linked_list* list){				/*deletes the last node and moves 
 	@Parameters:    list
 	@Returns:	    None
 	@Descriptions:    This function removes the list with freeing every nodes separately.
-		For every deletion of a node, this function prints message ¡°The node with value n (corresponding value) is deleted!¡±
-		and  if the whole list is deleted, it prints message ¡°The list is completely deleted: n nodes are deleted¡±
+		For every deletion of a node, this function prints message Â¡Â°The node with value n (corresponding value) is deleted!Â¡Â±
+		and  if the whole list is deleted, it prints message Â¡Â°The list is completely deleted: n nodes are deletedÂ¡Â±
 	@Error cases:    None
 */
 void remove_list(struct linked_list* list)
