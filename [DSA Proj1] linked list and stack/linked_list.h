@@ -1,13 +1,11 @@
 /********************************************
 	Class: Data Structure and Algorithms, KECE208
 		   fall, 2020
-
 	1st Project: List
-	linked_list.h
-
-	Name:
-	StudentID:
-	E-mail:
+	linked_list.c
+	Name:Park Jihyuk
+	StudentID:2016160145
+	E-mail:wlgur1023@naver.com
 
 **********************************************/
 
