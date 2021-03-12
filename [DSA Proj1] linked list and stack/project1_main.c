@@ -5,9 +5,9 @@
 	1st Project: List
 	project1_main.c
 
-	Name:
-	StudentID:
-	E-mail:
+	Name:	Park Jihyuk
+	StudentID:2016160145
+	E-mail:wlgur1023@naver.com
 
 **********************************************/
 
